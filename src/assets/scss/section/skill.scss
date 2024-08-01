@@ -6,54 +6,56 @@
     display: flex;
     justify-content: space-between;
 
+
     @media(max-width:800px){
         flex-direction: column;
     }
 
     .skill_title{
+        width: 48%;
+        height: 5vw;
         position: sticky;
-        // 헤더 밑에 고정할거라서 탑값 70px 띄워줌
         top: 70px;
         left: 0;
-        width: 48%;
-        height: 5vw;  //높이 꼭~ 있어야 함.
         font-size: 4vw;
         font-weight: 900;
-        line-height: 1.6;
         font-family: var(--mainKor-font);
-        color: var(--black200);
-        border-bottom: 0.4vw solid var(--black200);
+        text-transform: uppercase;
+        border-bottom: 0.4vw solid var(--black);
+
 
         @media(max-width:800px){
             width: 100%;
+            height: auto;
+            background-color: var(--mainBg-color);
             margin-bottom: 10vw;
-            font-size: 30px;
-            height: auto;  //얼마줄지 모를땐 오토값, 마음에 들면 그대로 둬도...
-            background-color: var(--mainBg-color);  //내려가면서 아래 글씨랑 겹치니까 배경값줌
+            top: 68px;
         }
 
         em{
             font-size: 20px;
             font-weight: 400;
-            line-height: 1;
+            line-height: 2;
         }
     }
+
     .skill_desc{
         width: 50%;
 
         @media(max-width:800px){
             width: 100%;
-        }    
+        }
+
         span{
             font-size: 5vw;
-            line-height: 1.3;  //밑 간격이 넓어지는 것. 큰글씨 쓸 때 이렇게만 떨어트려 놔도 괜찮을듯
-            font-weight: 900;
-            font-family: var(--mainNum-font);  //지마켓 폰트 숫자가 이쁨
+            font-weight: 800;
+            font-family: var(--mainNum-font);
+            
         }
         h3{
-            font-size: 24px;
-            text-decoration: underline;
+            font-size: 26px;
             margin-bottom: 1vw;
+            text-decoration: underline;
         }
         p{
             margin-bottom: 30vh;
