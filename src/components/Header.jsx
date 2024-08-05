@@ -1,47 +1,44 @@
 import React, { useState } from 'react'
-
 const headerNav = [
     // headerNav 라는 배열 안에 아래를 하나하나 넣어준 것
     {
         title: "intro",
-        url: "#intro",
+        url: "#intro"
     },
     {
         title: "skill",
-        url: "#skill",
+        url: "#skill"
     },
     {
         title: "site",
-        url: "#site",
+        url: "#site"
     },
     {
-        title: "port",
-        url: "#port",
+        title: "portfolio",
+        url: "#port"
     },
     {
         title: "contact",
-        url: "#contact",
+        url: "#contact"
     },
-
 ]
+
 
 const Header = () => {
 
     const [show, setShow] = useState(false);
     const toggleMenu = () => {
-        setShow((prevShow) => !prevShow);
+        setShow((prewShow) => !prewShow);
         //토글키를 사용할 수 있는 함수... 0이 들어오면 1로, 1이 들어오면 0으로 만들어주는 식의. 
     }
-
 
     return (
         <header id='header' role='banner'>
             <div className="header_inner">
                 <div className="header_logo">
-                    <a href="/">portfolio<em>react</em></a>
+                    <a href="/">portfolio <em>react</em></a>
                 </div>
-                <div
-                    className={`header_nav ${show ? "show" : ""}`}
+                <div className={`header_nav ${show ? "show" : ""}`}
                     role='navigation'
                     aria-label='메인 메뉴'
                 >
@@ -54,13 +51,14 @@ const Header = () => {
                                 <a href={nav.url}>{nav.title}</a>
                             </li>
                         ))}
+
                     </ul>
                 </div>
                 <div
                     className="header_nav_moblie"
-                    id="headerToggle"
-                    aria-controls="primary_menu"
-                    aria-expanded={show ? "true" : "false"}
+                    id='headerToggle'
+                    aria-expanded="false"
+                    aria-controls='primary-menu'
                     role='button'
                     tabIndex="0"
                     onClick={toggleMenu}
@@ -73,7 +71,7 @@ const Header = () => {
 
                 //     tabindex="-1"
                 //     키보드 초점을 받을 수 있는 요소도 초점을 받을 수 없도록 만들어 줍니다. 초점을 받을 수 없기 때문에 "-1" 이외의 다른 음의 정수 값은 사실상 의미가 없습니다.
-
+                
                 >
                     <span></span>
                 </div>
